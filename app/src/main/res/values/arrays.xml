@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="tipos_vehiculo">
+        <item>Nuevo</item>
+        <item>Usado</item>
+    </string-array>
+</resources>

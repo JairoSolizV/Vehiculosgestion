@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Spinner para seleccionar tipo de vehículo -->
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipos_vehiculo"
+        android:minHeight="48dp" />
+
+    <!-- Campos comunes -->
+    <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Marca"
+        android:inputType="textCapWords"
+        android:background="@drawable/edittext_background"/>
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Modelo"
+        android:inputType="textCapWords"
+        android:background="@drawable/edittext_background"/>
+
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Precio Base ($)"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edittext_background"/>
+
+    <!-- Campos para vehículos NUEVOS (visibilidad inicial: GONE) -->
+    <EditText
+        android:id="@+id/etDescuento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Descuento Promocional (%)"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        android:background="@drawable/edittext_background"/>
+
+    <!-- Campos para vehículos USADOS (visibilidad inicial: GONE) -->
+    <EditText
+        android:id="@+id/etAños"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Años de Uso"
+        android:inputType="number"
+        android:visibility="gone"
+        android:background="@drawable/edittext_background"/>
+
+    <EditText
+        android:id="@+id/etDepreciacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Depreciación (%)"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        android:background="@drawable/edittext_background"/>
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:visibility="visible"/>
+
+    <!-- Botón de acción -->
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="REGISTRAR VEHÍCULO"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#f2112f"/>
+
+    <!-- Lista de vehículos registrados -->
+    <ListView
+        android:id="@+id/lvVehiculos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"/>
+    <TextView
+        android:id="@+id/tvResumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#ed6f80"/>
+    <EditText
+        android:id="@+id/etBuscarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese ID a buscar"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar por ID"
+        android:backgroundTint="#f2112f"/>
+</LinearLayout>
